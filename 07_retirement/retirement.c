@@ -34,8 +34,11 @@ void retirement ( int startAge, double initial,
 
     printf( "Age %3d month %2d you have $%.2f\n", age, months, balance );
 
-    months++;
+    months++; 
 
+    balance = balance*working.rate_of_return + working.contribution + balance;
+
+    
     if ( months>11 ) {
 
       age++;
@@ -43,8 +46,6 @@ void retirement ( int startAge, double initial,
       months=0;
 
       }
-
-    balance = balance*working.rate_of_return + working.contribution + balance;
 
   }
 
@@ -55,6 +56,9 @@ void retirement ( int startAge, double initial,
 
     months++;
 
+    balance = balance*retired.rate_of_return + retired.contribution + balance;
+
+    
     if ( months>11 ) {
 
       age++;
@@ -62,8 +66,6 @@ void retirement ( int startAge, double initial,
       months=0;
 
       }
-
-    balance = balance*retired.rate_of_return - retired.contribution + balance;
 
   }
 
@@ -87,7 +89,7 @@ int main(void){
 
     retired.months = 384;
 
-    retired.contribution = 4000;
+    retired.contribution = -4000;
 
     retired.rate_of_return = .01/12;
 
