@@ -69,6 +69,8 @@ void retirement ( int startAge, double initial,
 
   }
 
+  return;
+
 }
 
 int main(void){
