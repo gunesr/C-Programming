@@ -30,7 +30,7 @@ void retirement ( int startAge, double initial,
 
   months = startAge%12;
 
-  for (i=0; i<working.months; i++){
+  for (i=0; i<=working.months; i++){
 
     printf( "Age %3d month %2d you have $%.2f\n", age, months, balance );
 
@@ -50,7 +50,7 @@ void retirement ( int startAge, double initial,
   }
 
 
-  for (j=0; j<retired.months; j++){
+  for (j=0; j<=retired.months; j++){
 
     printf( "Age %3d month %2d you have $%.2f\n", age, months, balance );
 
