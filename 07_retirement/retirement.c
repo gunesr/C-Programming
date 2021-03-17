@@ -97,4 +97,5 @@ int main(void) {
 
   retirement ( startAge, initial, working, retired ) ;
 
+  return EXIT_SUCCESS;
 }
